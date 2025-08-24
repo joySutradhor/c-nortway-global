@@ -28,7 +28,7 @@ const bannerData = [
     color: 'Northway Global',
     desc: 'Choose Northway For Your Study Abroad Journey & Embark on An Exceptional Educational Experience That Combines Academic Excellence, Personalized Guidance, and a Seamless Transition to You.',
     img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/others/cta.jpg',
-    btn: 'Explore Now'
+    btn: 'Start Your Journey'
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const bannerData = [
     color: 'Northway Global',
     desc: 'Choose Northway For Your Study Abroad Journey & Embark on An Exceptional Educational Experience That Combines Academic Excellence, Personalized Guidance, and a Seamless Transition to You.',
     img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/others/cta.jpg',
-    btn: 'Get Started'
+    btn: 'Start Your Journey'
   }
 ]
 
