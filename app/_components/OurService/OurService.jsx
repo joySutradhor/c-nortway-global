@@ -4,7 +4,7 @@ import SectionHeading from '../utlities/SectionHeading/SectionHeading'
 import { FaPlane, FaPassport, FaGraduationCap, FaFileAlt } from 'react-icons/fa'
 import { MdOutlineLocalOffer } from 'react-icons/md'
 
-// import TooltipBtn from '../utlities/TooltipBtn/TooltipBtn'
+
 
 export default function OurService () {
   const servicesData = [
