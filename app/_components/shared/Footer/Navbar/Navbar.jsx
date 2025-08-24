@@ -9,16 +9,15 @@ import {
   FaYoutube
 } from 'react-icons/fa'
 import { FaLocationArrow } from 'react-icons/fa6'
-
 import { FiMenu, FiX } from 'react-icons/fi'
 
 import logo from '../../../../../public/logo.webp'
-import BaseBtn from '@/app/_components/utlities/CommonBtn/BaseBtn'
 import Link from 'next/link'
 
 export default function Navbar () {
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(null)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const toggleDropdown = menu => {
     setDropdownOpen(dropdownOpen === menu ? null : menu)
@@ -102,8 +101,6 @@ export default function Navbar () {
           {/* Study Destination Dropdown */}
           <li className='relative group cursor-pointer'>
             <span className='hover:text-[#FF9100]'>Study Destination ▾</span>
-
-            {/* Dropdown */}
             <div className='absolute left-1/2 -translate-x-1/2 top-full mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white shadow-lg rounded-lg py-4 z-50'>
               <ul className='grid grid-cols-4 gap-5 w-[60rem] mx-auto justify-center items-center p-5'>
                 {[
@@ -138,12 +135,7 @@ export default function Navbar () {
           {/* Gallery Dropdown */}
           <li className='relative group cursor-pointer'>
             <span className='hover:text-[#FF9100]'>Gallery ▾</span>
-
-            <ul
-              className='absolute left-1/2 -translate-x-1/2 top-full mt-5 
-                 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                 transition-all duration-200 bg-white shadow-lg rounded-lg py-2 w-48 z-50'
-            >
+            <ul className='absolute left-1/2 -translate-x-1/2 top-full mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white shadow-lg rounded-lg py-2 w-48 z-50'>
               <Link href={'/photo-gallery'}>
                 <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>
                   Photo Gallery
@@ -169,11 +161,12 @@ export default function Navbar () {
         </ul>
 
         <div>
-          <BaseBtn
-            link='/contact-us'
-            text='Enquire Now'
-            icon={FaLocationArrow}
-          />
+          <button
+            onClick={() => setModalOpen(true)}
+            className='flex items-center gap-2 bg-transparent text-[#ff9100] border border-[#ff9100] hover:bg-[#ff9100]  hover:text-white font-semibold px-5 py-2 rounded-lg transition cursor-pointer'
+          >
+            Enquire Now <FaLocationArrow />
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -224,6 +217,67 @@ export default function Navbar () {
           <li>Blogs</li>
           <li>Contact Us</li>
         </ul>
+      )}
+
+      {/* 🔹 Modal Form */}
+      {modalOpen && (
+        <div className='fixed inset-0 bg-black/60 flex justify-center items-center z-50'>
+          <div className='bg-white rounded-lg shadow-lg w-[90%] max-w-lg p-6 relative'>
+            {/* Close Button */}
+            <button
+              onClick={() => setModalOpen(false)}
+              className='absolute top-3 right-3 text-gray-600 hover:text-black text-xl cursor-pointer'
+            >
+              <FiX />
+            </button>
+
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              Enquire Now
+            </h2>
+            <form className='space-y-4'>
+              <input
+                type='text'
+                placeholder='Full Name'
+                className='w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#FF9100] outline-none'
+              />
+              <input
+                type='email'
+                placeholder='Email Address'
+                className='w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#FF9100] outline-none'
+              />
+              <input
+                type='tel'
+                placeholder='Phone Number'
+                className='w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#FF9100] outline-none'
+              />
+              <select className='w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#FF9100] outline-none'>
+                <option value=''>Select Country</option>
+                <option value='USA'>Bangladesh</option>
+                <option value='USA'>USA</option>
+                <option value='UK'>UK</option>
+                <option value='Canada'>Canada</option>
+                <option value='Australia'>Australia</option>
+                <option value='Australia'>Japan</option>
+                <option value='Australia'>Ireland</option>
+                <option value='Australia'>South Korea</option>
+                <option value='Australia'>China</option>
+                <option value='Germany'>Germany</option>
+              </select>
+              <textarea
+                placeholder='Your Message'
+                rows='3'
+                className='w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#FF9100] outline-none'
+              ></textarea>
+
+              <button
+                type='submit'
+                className='w-full bg-[#FF9100] text-white font-semibold  text-center justify-center items-center gap-x-1.5 inline-flex py-2 rounded-lg  transition cursor-pointer'
+              >
+                Submit Enquiry  <FaLocationArrow/>
+              </button>
+            </form>
+          </div>
+        </div>
       )}
     </div>
   )

@@ -113,10 +113,10 @@ export default function HeroBanner () {
                 {featureData.map(feature => (
                   <div
                     key={feature.id}
-                    className='flex flex-col items-center text-center bg-white/80 backdrop-blur-md shadow-md rounded-xl p-6 hover:shadow-lg transition'
+                    className='flex flex-col items-center text-center bg-white/5 backdrop-blur-md shadow-md rounded-xl p-6 hover:shadow-lg transition'
                   >
                     {feature.icon}
-                    <h3 className='mt-4 text-lg font-semibold text-gray-800'>
+                    <h3 className='mt-4 text-lg font-semibold text-white'>
                       {feature.title}
                     </h3>
                   </div>
