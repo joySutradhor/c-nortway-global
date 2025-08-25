@@ -39,7 +39,7 @@ export default function ApplicationProcess () {
       <div className='section__spacing'>
    
         <h2 className='headingText text-center'>
-          <span className='text-orange-500'>Our</span> Application Process
+          <span className='text-[#ff9100]'>Our</span> Application Process
         </h2>
         <p className='heading__sub__text max-w-3xl mx-auto text-center mb-12'>
           If you’ve decided to study at a university, you will have to gather
@@ -56,7 +56,7 @@ export default function ApplicationProcess () {
                 <div
                   className={`flex items-center justify-center size-20 rounded-full border-2 border-dashed ${
                     step.highlight
-                      ? 'bg-orange-500 text-white border-orange-500'
+                      ? 'bg-[#ff9100] text-white border-[#ff9100]'
                       : 'border-gray-400 text-gray-700'
                   }`}
                 >
@@ -83,7 +83,7 @@ export default function ApplicationProcess () {
                 <div
                   className={`flex items-center justify-center size-20 rounded-full border-2 border-dashed ${
                     step.highlight
-                      ? 'bg-orange-500 text-white border-orange-500'
+                      ? 'bg-[#ff9100] text-white border-[#ff9100]'
                       : 'border-gray-400 text-gray-700'
                   }`}
                 >
