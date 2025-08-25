@@ -104,29 +104,27 @@ export default function Navbar () {
             <div className='absolute left-1/2 -translate-x-1/2 top-full mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white shadow-lg rounded-lg py-4 z-50'>
               <ul className='grid grid-cols-4 gap-5 w-[60rem] mx-auto justify-center items-center p-5'>
                 {[
-                  { name: 'USA', flag: 'us' },
-                  { name: 'UK', flag: 'gb' },
-                  { name: 'Canada', flag: 'ca' },
-                  { name: 'Australia', flag: 'au' },
-                  { name: 'Malaysia', flag: 'my' },
-                  { name: 'Ireland', flag: 'ie' },
-                  { name: 'Austria', flag: 'at' },
-                  { name: 'Germany', flag: 'de' },
-                  { name: 'Japan', flag: 'jp' },
-                  { name: 'China', flag: 'cn' },
-                  { name: 'South Korea', flag: 'kr' }
+                  { name: 'USA', flag: 'us', url: '/usa' },
+                  { name: 'UK', flag: 'gb', url: '/uk' },
+                  { name: 'Canada', flag: 'ca', url: '/canada' },
+                  { name: 'Australia', flag: 'au', url: '/australia' },
+                  { name: 'Malaysia', flag: 'my', url: '/malaysia' },
+                  { name: 'Austria', flag: 'at', url: '/austria' },
+                  { name: 'Germany', flag: 'de', url: '/germany' },
+                  { name: 'Japan', flag: 'jp', url: '/japan' },
+                  { name: 'China', flag: 'cn', url: '/china' },
+                  { name: 'South Korea', flag: 'kr', url: '/south-korea' }
                 ].map(country => (
-                  <li
-                    key={country.name}
-                    className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'
-                  >
-                    <img
-                      src={`https://flagcdn.com/w40/${country.flag}.png`}
-                      alt={country.name}
-                      className='w-6 h-5 object-cover rounded-sm'
-                    />
-                    {country.name}
-                  </li>
+                  <Link href={country.url} key={country.name}>
+                    <li className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'>
+                      <img
+                        src={`https://flagcdn.com/w40/${country.flag}.png`}
+                        alt={country.name}
+                        className='w-6 h-5 object-cover rounded-sm'
+                      />
+                      {country.name}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </div>
@@ -273,7 +271,7 @@ export default function Navbar () {
                 type='submit'
                 className='w-full bg-[#FF9100] text-white font-semibold  text-center justify-center items-center gap-x-1.5 inline-flex py-2 rounded-lg  transition cursor-pointer'
               >
-                Submit Enquiry  <FaLocationArrow/>
+                Submit Enquiry <FaLocationArrow />
               </button>
             </form>
           </div>
