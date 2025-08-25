@@ -8,7 +8,10 @@ import {
   FaLaptop,
   FaChalkboardTeacher
 } from 'react-icons/fa'
+import { SiVisa } from 'react-icons/si'
+
 import { MdOutlineAssignmentTurnedIn } from 'react-icons/md'
+import TooltipBtn from '../../utlities/TooltipBtn/TooltipBtn'
 
 const applicationProcess = [
   { id: 1, title: 'Clients profile review', icon: <FaUserCheck size={24} /> },
@@ -25,7 +28,7 @@ const applicationProcess = [
   {
     id: 8,
     title: 'Visa application for submission',
-    icon: <MdOutlineAssignmentTurnedIn size={24} />,
+    icon: <SiVisa size={24} />,
     highlight: true
   }
 ]
@@ -34,6 +37,7 @@ export default function ApplicationProcess () {
   return (
     <section className=''>
       <div className='section__spacing'>
+   
         <h2 className='headingText text-center'>
           <span className='text-orange-500'>Our</span> Application Process
         </h2>
