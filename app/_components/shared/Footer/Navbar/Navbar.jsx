@@ -24,7 +24,7 @@ export default function Navbar () {
   }
 
   return (
-    <div >
+    <div>
       {/* Topbar */}
       <div className='hidden lg:block'>
         <div className='grid grid-cols-[80%__20%] xl:grid-cols-[75%__25%] items-center justify-between w-full py-3 px-6 md:px-10  xl:px-20 bg-[#FEDDB1] '>
@@ -119,7 +119,8 @@ export default function Navbar () {
                   { name: 'Germany', flag: 'de', url: '/germany' },
                   { name: 'Japan', flag: 'jp', url: '/japan' },
                   { name: 'China', flag: 'cn', url: '/china' },
-                  { name: 'South Korea', flag: 'kr', url: '/south-korea' }
+                  { name: 'South Korea', flag: 'kr', url: '/south-korea' },
+                  { name: 'Austria', flag: 'at', url: '/austria' }
                 ].map(country => (
                   <Link href={country.url} key={country.name}>
                     <li className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'>
@@ -185,8 +186,12 @@ export default function Navbar () {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <ul className='md:hidden bg-white shadow-lg px-6 py-4 space-y-3 font-semibold text-gray-700'>
-          <li>Home</li>
-          <li>About Us</li>
+          <Link href='/'>
+            <li>Home</li>
+          </Link>
+          <Link href='/about-us'>
+            <li>About Us</li>
+          </Link>
           <li>
             <button
               onClick={() => toggleDropdown('study')}
@@ -195,11 +200,31 @@ export default function Navbar () {
               Study Destination ▾
             </button>
             {dropdownOpen === 'study' && (
-              <ul className='pl-4 mt-2 space-y-1'>
-                <li>UK</li>
-                <li>USA</li>
-                <li>Germany</li>
-                <li>Canada</li>
+              <ul className='grid  gap-5 items-center p-5'>
+                {[
+                  { name: 'USA', flag: 'us', url: '/usa' },
+                  { name: 'UK', flag: 'gb', url: '/uk' },
+                  { name: 'Canada', flag: 'ca', url: '/canada' },
+                  { name: 'Australia', flag: 'au', url: '/australia' },
+                  { name: 'Malaysia', flag: 'my', url: '/malaysia' },
+                  { name: 'Austria', flag: 'at', url: '/austria' },
+                  { name: 'Germany', flag: 'de', url: '/germany' },
+                  { name: 'Japan', flag: 'jp', url: '/japan' },
+                  { name: 'China', flag: 'cn', url: '/china' },
+                  { name: 'South Korea', flag: 'kr', url: '/south-korea' },
+                  { name: 'Austria', flag: 'at', url: '/austria' }
+                ].map(country => (
+                  <Link href={country.url} key={country.name}>
+                    <li className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'>
+                      <img
+                        src={`https://flagcdn.com/w40/${country.flag}.png`}
+                        alt={country.name}
+                        className='w-6 h-5 object-cover rounded-sm'
+                      />
+                      {country.name}
+                    </li>
+                  </Link>
+                ))}
               </ul>
             )}
           </li>
@@ -212,14 +237,18 @@ export default function Navbar () {
             </button>
             {dropdownOpen === 'gallery' && (
               <ul className='pl-4 mt-2 space-y-1'>
-                <li>Photo Gallery</li>
-                <li>Video Gallery</li>
+                <Link href="photo-gallery">
+                  <li>Photo Gallery</li>
+                </Link>
+                <Link href="video-gallery">
+                  <li>Video Gallery</li>
+                </Link>
               </ul>
             )}
           </li>
-          <li>Service</li>
-          <li>Blogs</li>
-          <li>Contact Us</li>
+          <Link href="/service"><li>Service</li></Link>
+          <Link href="/blogs"><li>Blogs</li></Link>
+          <Link href="/contact-us"><li>Contact Us</li></Link>
         </ul>
       )}
 
