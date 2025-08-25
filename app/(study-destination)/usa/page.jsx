@@ -1,11 +1,15 @@
 import Banner from '@/app/_components/Banner/Banner'
+import BlogList from '@/app/_components/Blogs/Blogs'
+
 import ApplicationProcess from '@/app/_components/StudyDestinationCmp/ApplicationProcess/ApplicationProcess'
 import Careers from '@/app/_components/StudyDestinationCmp/Careers/Careers'
 import EducationCost from '@/app/_components/StudyDestinationCmp/EducationCost/EducationCost'
+import FaqArea from '@/app/_components/StudyDestinationCmp/FaqArea/FaqArea'
 import AtAGlance from '@/app/_components/StudyDestinationCmp/Glance/Glance'
+import PopularUniversities from '@/app/_components/StudyDestinationCmp/PopularUniversities/PopularUniversities'
 import WhyStudy from '@/app/_components/StudyDestinationCmp/WhyStudy/WhyStudy'
 import Testimonial from '@/app/_components/Testimonial/Testimonial'
-import React from 'react'
+
 
 export default function page () {
   const studyAbroadData = [
@@ -104,6 +108,45 @@ export default function page () {
     }
   ]
 
+  const universities = [
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/uni1-66db36043eb12.webp',
+      name: 'University of Connecticut'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/uni2-66db364355225.webp',
+      name: 'Arizona State University'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/uni3-66db368f59e38.webp',
+      name: 'University of California'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/columbia.webp',
+      name: 'Columbia University'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/priceton.webp',
+      name: 'Princeton University'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/harvard.webp',
+      name: 'Harvard University'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/yale.webp',
+      name: 'Yale University'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/stanford.webp',
+      name: 'Stanford University'
+    },
+    {
+      img: 'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/universitity/nyu.jpg',
+      name: 'Nyc University'
+    }
+  ]
+
   return (
     <div>
       <div>
@@ -119,9 +162,12 @@ export default function page () {
       <ApplicationProcess />
       <WhyStudy studyAbroadData={studyAbroadData} />
       <Careers careersData={careersData} />
+      <PopularUniversities universities={universities} />
       <EducationCost educationCostData={educationCostData} />
       <AtAGlance glanceData={glanceData} colorText='Usa' />
       <Testimonial />
+      <FaqArea />
+      <BlogList/>
     </div>
   )
 }

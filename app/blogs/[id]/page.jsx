@@ -12,12 +12,12 @@ export default function BlogDetails ({ params }) {
   }
 
   return (
-    <div className='max-w-5xl mx-auto px-5 py-10'>
+    <div className='max-w-5xl mx-auto px-4 md:px-10 lg:px-10 xl:px-20 py-10'>
       {/* Title */}
-      <h1 className='headingText'>{blog.title}</h1>
+      <h1 className='bl__title'>{blog.title}</h1>
 
       {/* Meta */}
-      <div className='flex items-center mb-6 mt-10'>
+      <div className='flex items-center mb-6 mt-5 xl:mt-10'>
         <img
           src={blog.authorImage}
           alt={blog.authorName}

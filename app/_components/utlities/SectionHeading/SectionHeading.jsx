@@ -29,7 +29,7 @@ export default function SectionHeading ({
       <h2 className='headingText text-3xl md:text-4xl font-bold mb-2'>
         {title}{' '}
         {colorTitle && (
-          <span className='heading__color__text text-blue-600'>
+          <span className='heading__color__text '>
             {colorTitle}
           </span>
         )}

@@ -93,12 +93,12 @@ export default function VideoGalleryCmp () {
 
   return (
     <div className=''>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
         {visibleGallery.map(item => (
           <div key={item.id} className='overflow-hidden rounded-lg'>
             <div className='h-full '>
               <iframe
-                className='w-full h-[35vh] rounded-lg bg-red-100'
+                className='w-full h-[30vh] xl:h-[35vh] rounded-lg '
                 src={item.videoLink}
                 frameBorder='0'
                 allow='autoplay; fullscreen; picture-in-picture'

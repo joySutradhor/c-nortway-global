@@ -233,7 +233,7 @@ export default function OurTeam () {
         </p>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 my-16'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-8 my-16'>
         {teamMembers.map(member => (
           <div
             key={member.id}
@@ -275,7 +275,7 @@ export default function OurTeam () {
         </p>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 my-16 space-y-10 '>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-8 my-16 space-y-10 '>
         {teamMembersExecutive.map(member => (
           <div
             key={member.id}

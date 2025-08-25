@@ -21,7 +21,7 @@ export default function BlogList () {
       />
 
       {/* Auto scrolling blogs */}
-      <div className='common__top__spacing grid grid-cols-3 gap-5 h-full '>
+      <div className='common__top__spacing grid md:grid-cols-2 lg:grid-cols-3 gap-5 h-full '>
         {blogs.slice(0, 3).map(blog => (
           <div
             key={blog.id}

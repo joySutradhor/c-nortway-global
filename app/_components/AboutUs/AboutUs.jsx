@@ -30,7 +30,7 @@ export default function AboutUs ({ heading, btnLink, colorText }) {
         <div >
           <div className='overflow-hidden rounded-xl'>
             <iframe
-              className='w-full h-[55vh]'
+              className='w-full h-[30vh] lg:h-[45vh] xl:h-[55vh]'
               src='https://player.vimeo.com/video/1054041163?h=5cf8e371e8&title=0&byline=0&portrait=0&badge=0&autoplay=0&controls=1&dnt=1&loop=0'
               frameBorder='0'
               allow='autoplay; fullscreen; picture-in-picture'
@@ -39,7 +39,7 @@ export default function AboutUs ({ heading, btnLink, colorText }) {
             ></iframe>
           </div>
           <div>
-            <div className='grid grid-cols-3 gap-2  '>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-2  '>
               {aboutUsData.stats.map((stat, i) => (
                 <div
                   key={i}

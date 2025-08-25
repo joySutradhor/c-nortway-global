@@ -16,7 +16,7 @@ export default function BlogCmp () {
   return (
     <div className='section__spacing '>
       {/* Blog Grid */}
-      <div className='common__top__spacing grid grid-cols-1 md:grid-cols-3 gap-5 h-full'>
+      <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 h-full'>
         {visibleBlogs.map(blog => (
           <div
             key={blog.id}

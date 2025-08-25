@@ -18,7 +18,7 @@ export default function ContactForm () {
           Our <span className='heading__color__text'>Offices</span>
         </h3>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-5 mt-10'>
-          <div className='h-[15vh] border border-black/10 flex justify-center items-center gap-3 p-10'>
+          <div className='h-[15vh] border border-black/10 flex justify-center items-center gap-3 p-5 lg:p-10'>
             <Image
               src='https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/flags/bangladesh.webp'
               alt='contact-map'
@@ -26,7 +26,7 @@ export default function ContactForm () {
               height={600}
               className=' h-8 w-10 rounded object-cover'
             />
-            <h3 className='text-3xl font-bold text-black/80 '>Bangladesh</h3>
+            <h3 className='cf__textTitle '>Bangladesh</h3>
           </div>
           <div className='h-[15vh] border border-black/10 flex justify-center  items-center gap-3 p-10'>
             <Image
@@ -36,7 +36,7 @@ export default function ContactForm () {
               height={600}
               className=' size-8 rounded object-cover'
             />
-            <h3 className='text-3xl font-bold text-black/80 '>America</h3>
+            <h3 className='cf__textTitle '>America</h3>
           </div>
           <div className='h-[15vh] border border-black/10 flex justify-center  items-center gap-3 p-10'>
             <Image
@@ -46,15 +46,15 @@ export default function ContactForm () {
               height={600}
               className=' size-8 rounded object-cover'
             />
-            <h3 className='text-3xl font-bold text-black/80 '>Australia</h3>
+            <h3 className='cf__textTitle '>Australia</h3>
           </div>
         </div>
       </div>
 
       {/* form  */}
-      <div className='mt-[15vh] grid grid-cols-12 gap-20 items-center'>
-        <div className='col-span-8'>
-          <form className=' bg-white p-10 rounded-lg space-y-5'>
+      <div className='mt-[15vh] grid lg:grid-cols-12 gap-10 xl:gap-20 items-center'>
+        <div className='lg:col-span-8 order-2 md:order-1'>
+          <form className=' bg-white p-5 lg:p-10 rounded-lg space-y-5'>
             <div>
               <label className='cf__label' htmlFor=''>
                 Name
@@ -103,7 +103,7 @@ export default function ContactForm () {
             <BaseBtn text='Submit' icon={MdArrowOutward}></BaseBtn>
           </form>
         </div>
-        <div className='col-span-4'>
+        <div className='lg:col-span-4 order-1 md:order-2'>
           <SectionHeading
             classNameBtn='!justify-start'
             text='Contact'
@@ -116,7 +116,7 @@ export default function ContactForm () {
 
           <div className='cf__socaiParent'>
             <div className='cf__socailDiv'>
-              <IoMailUnreadSharp className='text-xl'></IoMailUnreadSharp>
+              <IoMailUnreadSharp className='text-sm md:text-base lg:text-xl '></IoMailUnreadSharp>
             </div>
             <div>
               <h2 className='heading__sub__text__contact__title'>Email</h2>
@@ -125,7 +125,7 @@ export default function ContactForm () {
           </div>
           <div className='cf__socaiParent'>
             <div className='cf__socailDiv'>
-              <FaPhone className='text-xl'></FaPhone>
+              <FaPhone className='text-sm md:text-base lg:text-xl '></FaPhone>
             </div>
             <div>
               <h2 className='heading__sub__text__contact__title'>Phone</h2>
@@ -134,7 +134,7 @@ export default function ContactForm () {
           </div>
           <div className='cf__socaiParent'>
             <div className='cf__socailDiv'>
-              <FaLocationDot className='text-xl'></FaLocationDot>
+              <FaLocationDot className='text-sm md:text-base lg:text-xl '></FaLocationDot>
             </div>
             <div>
               <h2 className='heading__sub__text__contact__title'>Address</h2>

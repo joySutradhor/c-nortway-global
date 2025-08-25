@@ -64,7 +64,7 @@ export default function Testimonial () {
           {testimonials.map(item => (
             <div
               key={item.id}
-              className='bg-white rounded-md border border-black/10  p-6 w-96 flex-shrink-0 mx-1'
+              className='bg-white rounded-md border border-black/10  p-6 w-72 lg:w-80 xl:w-96 flex-shrink-0 mx-1'
             >
               <FaQuoteLeft className='text-3xl text-gray-300 ' />
               <p className='text__base mb-4 mt-2'>{item.message}</p>

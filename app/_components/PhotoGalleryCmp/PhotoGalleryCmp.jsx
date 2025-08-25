@@ -85,7 +85,7 @@ export default function PhotoGalleryCmp () {
 
   return (
     <div className=' section__spacing'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
         {visibleGallery.map(item => (
           <div key={item.id} className='overflow-hidden rounded-lg'>
             <img

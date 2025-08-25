@@ -4,7 +4,7 @@ export default function MissionVision () {
   return (
     <div className='mt-[15vh]'>
       <div className='mv__container '>
-        <div className='max-w-7xl mx-auto flex  items-center h-full'>
+        <div className='xl:max-w-7xl mx-auto flex  items-center h-full px-4 md:px-10 xl:px-0 py-5'>
           <div className='text-left'>
             <div>
               <h3 className='headingText !text-white'>Our <span className='heading__color__text'>Mission</span></h3>

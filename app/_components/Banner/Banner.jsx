@@ -3,7 +3,7 @@ import React from 'react'
 export default function Banner ({ url, text, des , colorText }) {
   return (
     <div
-      className='bg-cover bg-top bg-no-repeat h-[60vh]  text-white text-left flex items-center px-20'
+      className='bg-cover bg-right xl:bg-top bg-no-repeat h-[30vh] md:h-[40vh] lg:h-[60vh]  text-white text-left flex items-center px-4 md:px-10 xl:px-20'
       style={{ backgroundImage: `url(${url})` }}
     >
       <div>

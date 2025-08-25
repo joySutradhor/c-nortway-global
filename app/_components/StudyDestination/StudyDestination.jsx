@@ -59,7 +59,7 @@ export default function StudyDestination () {
 
       {/* study destination  */}
       <div className='common__top__spacing'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5'>
           {studyDestinations.map(dest => (
             <div
               key={dest.id}

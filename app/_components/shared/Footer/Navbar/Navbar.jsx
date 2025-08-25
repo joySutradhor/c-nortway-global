@@ -24,58 +24,64 @@ export default function Navbar () {
   }
 
   return (
-    <div>
+    <div >
       {/* Topbar */}
-      <div className='flex flex-col md:flex-row items-center justify-between py-3 px-6 md:px-20 bg-[#FEDDB1]'>
-        {/* Contact Info */}
-        <div className='space-y-1 md:space-y-0 flex flex-col md:flex-row items-center text-sm md:text-base font-bold text-black/70 gap-x-6 md:gap-x-16'>
-          <h3>Dhaka office: +8801771660030</h3>
-          <h3>USA office: +19179246493</h3>
-          <h3>Australia office: +61449615940</h3>
-        </div>
+      <div className='hidden lg:block'>
+        <div className='grid grid-cols-[80%__20%] xl:grid-cols-[75%__25%] items-center justify-between w-full py-3 px-6 md:px-10  xl:px-20 bg-[#FEDDB1] '>
+          {/* Contact Info */}
+          <div className=''>
+            <div className='space-y-1 md:space-y-0 flex  items-center text-sm  xl:text-base font-bold text-black/70 gap-x-6 lg:gap-x-8  xl:gap-x-16'>
+              <h3>Dhaka office: +8801771660030</h3>
+              <h3>USA office: +19179246493</h3>
+              <h3>Australia office: +61449615940</h3>
+            </div>
+          </div>
 
-        {/* Social Media Links */}
-        <div className='flex space-x-4 text-lg text-gray-700 mt-2 md:mt-0'>
-          <a
-            href='https://facebook.com'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaFacebookF className='hover:text-[#FF9100]' />
-          </a>
-          <a
-            href='https://twitter.com'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaTwitter className='hover:text-[#FF9100]' />
-          </a>
-          <a
-            href='https://linkedin.com'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaLinkedinIn className='hover:text-[#FF9100]' />
-          </a>
-          <a
-            href='https://instagram.com'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaInstagram className='hover:text-[#FF9100]' />
-          </a>
-          <a
-            href='https://youtube.com'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaYoutube className='hover:text-[#FF9100]' />
-          </a>
+          {/* Social Media Links */}
+          <div className='flex justify-end'>
+            <div className='flex space-x-4 text-lg text-gray-700 mt-2 md:mt-0'>
+              <a
+                href='https://facebook.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaFacebookF className='hover:text-[#FF9100]' />
+              </a>
+              <a
+                href='https://twitter.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaTwitter className='hover:text-[#FF9100]' />
+              </a>
+              <a
+                href='https://linkedin.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaLinkedinIn className='hover:text-[#FF9100]' />
+              </a>
+              <a
+                href='https://instagram.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaInstagram className='hover:text-[#FF9100]' />
+              </a>
+              <a
+                href='https://youtube.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaYoutube className='hover:text-[#FF9100]' />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Navbar */}
-      <div className='px-6 md:px-20 py-5 flex items-center justify-between shadow'>
+      <div className=' px-4 md:px-10 xl:px-20 py-5 flex items-center justify-between shadow'>
         {/* Logo */}
         <div>
           <Link href={'/'}>
@@ -90,7 +96,7 @@ export default function Navbar () {
         </div>
 
         {/* Desktop Menu */}
-        <ul className='hidden md:flex items-center space-x-8 text-lg font-semibold text-gray-700'>
+        <ul className='hidden lg:flex items-center lg:space-x-3 xl:space-x-8 text-sm xl:text-lg font-semibold text-gray-700'>
           <Link href={'/'}>
             <li className='hover:text-[#FF9100] cursor-pointer'>Home</li>
           </Link>
@@ -158,7 +164,7 @@ export default function Navbar () {
           </Link>
         </ul>
 
-        <div>
+        <div className='hidden lg:block'>
           <button
             onClick={() => setModalOpen(true)}
             className='flex items-center gap-2 bg-transparent text-[#ff9100] border border-[#ff9100] hover:bg-[#ff9100]  hover:text-white font-semibold px-5 py-2 rounded-lg transition cursor-pointer'
@@ -169,7 +175,7 @@ export default function Navbar () {
 
         {/* Mobile Menu Button */}
         <div
-          className='md:hidden text-2xl text-gray-700'
+          className='lg:hidden text-2xl text-gray-700'
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FiX /> : <FiMenu />}
