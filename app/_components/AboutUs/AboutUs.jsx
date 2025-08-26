@@ -28,7 +28,7 @@ export default function AboutUs ({ heading, btnLink, colorText }) {
     <div className='section__spacing '>
       <div className='ab__container '>
         <div >
-          <div className='overflow-hidden rounded-xl'>
+          <div className='overflow-hidden rounded-xl mb-5 '>
             <iframe
               className='w-full h-[30vh] lg:h-[45vh] xl:h-[55vh]'
               src='https://player.vimeo.com/video/1054041163?h=5cf8e371e8&title=0&byline=0&portrait=0&badge=0&autoplay=0&controls=1&dnt=1&loop=0'
@@ -43,7 +43,7 @@ export default function AboutUs ({ heading, btnLink, colorText }) {
               {aboutUsData.stats.map((stat, i) => (
                 <div
                   key={i}
-                  className='flex flex-col items-center border border-black/10 p-2'
+                  className='flex flex-col items-center border border-black/10 p-2 text-center'
                 >
                   <h3 className='text-xl font-bold text-black/80 '>
                     {stat.number}
@@ -55,7 +55,7 @@ export default function AboutUs ({ heading, btnLink, colorText }) {
           </div>
         </div>
 
-        <div>
+        <div className='mt-10 md:mt-0'>
           {/* Main content */}
           <TooltipBtn text='About Us' icon={FaUserAlt} />
           <div className='space-y-5'>

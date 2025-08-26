@@ -185,13 +185,17 @@ export default function Navbar () {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <ul className='md:hidden bg-white shadow-lg px-6 py-4 space-y-3 font-semibold text-gray-700'>
-          <Link href='/'>
-            <li>Home</li>
-          </Link>
-          <Link href='/about-us'>
-            <li>About Us</li>
-          </Link>
+        <ul className='md:hidden bg-white shadow-lg px-6 py-4 space-y-2  font-medium text-gray-700 pb-16'>
+          <div>
+            <Link href='/' onClick={() => setMenuOpen(!menuOpen)}>
+              <li>Home</li>
+            </Link>
+          </div>
+          <div>
+            <Link href='/about-us' onClick={() => setMenuOpen(!menuOpen)}>
+              <li>About Us</li>
+            </Link>
+          </div>
           <li>
             <button
               onClick={() => toggleDropdown('study')}
@@ -215,7 +219,7 @@ export default function Navbar () {
                   { name: 'Ireland', flag: 'ie', url: '/ireland' }
                 ].map(country => (
                   <Link href={country.url} key={country.name}>
-                    <li className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'>
+                    <li onClick={() => setMenuOpen(!menuOpen)} className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'>
                       <img
                         src={`https://flagcdn.com/w40/${country.flag}.png`}
                         alt={country.name}
@@ -237,18 +241,30 @@ export default function Navbar () {
             </button>
             {dropdownOpen === 'gallery' && (
               <ul className='pl-4 mt-2 space-y-1'>
-                <Link href="photo-gallery">
+                <Link onClick={() => setMenuOpen(!menuOpen)} href='photo-gallery'>
                   <li>Photo Gallery</li>
                 </Link>
-                <Link href="video-gallery">
+                <Link onClick={() => setMenuOpen(!menuOpen)} href='video-gallery'>
                   <li>Video Gallery</li>
                 </Link>
               </ul>
             )}
           </li>
-          <Link href="/service"><li>Service</li></Link>
-          <Link href="/blogs"><li>Blogs</li></Link>
-          <Link href="/contact-us"><li>Contact Us</li></Link>
+          <div>
+            <Link onClick={() => setMenuOpen(!menuOpen)} href='/service'>
+              <li>Service</li>
+            </Link>
+          </div>
+          <div>
+            <Link onClick={() => setMenuOpen(!menuOpen)} href='/blogs'>
+              <li>Blogs</li>
+            </Link>
+          </div>
+          <div>
+            <Link onClick={() => setMenuOpen(!menuOpen)} href='/contact-us'>
+              <li>Contact Us</li>
+            </Link>
+          </div>
         </ul>
       )}
 
