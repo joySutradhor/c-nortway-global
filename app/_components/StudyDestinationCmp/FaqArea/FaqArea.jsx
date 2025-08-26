@@ -3,30 +3,9 @@ import React, { useState } from 'react'
 import { FaMinus, FaPlus } from 'react-icons/fa'
 import { FiMinus, FiPlus } from 'react-icons/fi'
 
-const faqs = [
-  {
-    title: 'Academic powers',
-    description:
-      'The USA is home to some of the best universities in the world. Most of the USA universities have been frequently placed high in international university rankings, as per the 2023 QS World Ranking. The US is home to 33 of the top 100 universities.'
-  },
-  {
-    title: 'Excellent international student support system',
-    description:
-      'American colleges are well-versed in the difficulties faced by international students and regularly hold orientation programs, workshops, and training to support them. Students from various cultures and nations study in the United States. On an average day, one can find students on the college campus from at least 10-15 different nationalities.'
-  },
-  {
-    title: 'Successful post-college career',
-    description:
-      'American jobs offer the highest wages. After completing their education, a large number of brilliant applicants relocate to the US to earn more money. Students who have studied in the United States have an advantage, as they can access exclusive career prospects and develop skills relevant to the workforce.'
-  },
-  {
-    title: 'Career opportunities',
-    description:
-      'Starting salaries for graduates from the top colleges in the USA are competitive. Even tier-2 university graduates can earn over $50,000 if they find the right employment. Graduates in STEM industries typically start at $66,123. Studying in the USA offers experiential learning through internships and job placements.'
-  }
-]
 
-export default function FaqArea ({ countryName = 'Usa' }) {
+
+export default function FaqArea ({ countryName = 'Usa' , faqsData , des}) {
   const [openIndex, setOpenIndex] = useState(0)
 
   const toggleFaq = index => {
@@ -46,13 +25,11 @@ export default function FaqArea ({ countryName = 'Usa' }) {
                 FAQ's
               </h3>
               <p className='text-lg max-w-3xl '>
-                Studying in the USA can offer a variety of benefits, making it
-                an attractive destination for international students. Here are
-                some reasons why study in USA is a popular choice.
+                {des}
               </p>
             </div>
 
-            {faqs.map((faq, index) => (
+            {faqsData.map((faq, index) => (
               <div key={index} className=' pb-4 bg-white rounded-lg'>
                 <button
                   onClick={() => toggleFaq(index)}
