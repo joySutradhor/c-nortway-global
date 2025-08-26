@@ -35,7 +35,7 @@ export default function RootLayout ({ children }) {
         <Navbar />
         {children}
         <Footer />
-        <div className='fixed bottom-16 right-10'>
+        <div className='fixed bottom-16 right-5 xl:right-10'>
           <a
             href='https://wa.me/8801771660030'
             target='_blank'
