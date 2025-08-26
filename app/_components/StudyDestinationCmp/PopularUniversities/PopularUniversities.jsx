@@ -17,7 +17,7 @@ export default function PopularUniversities ({ universities }) {
           Popular {" "}
           <span className='banner__color__title'>Universities</span>
         </h3>
-        <div className='max-w-5xl mx-auto pb-[10vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-[5vh]'>
+        <div className='max-w-5xl mx-auto pb-[10vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-[5vh] px-4 md:px-10 xl:px-0'>
           {universities.map((uni, index) => (
             <div
               key={index}

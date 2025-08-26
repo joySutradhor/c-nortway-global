@@ -6,7 +6,7 @@ export default function WhyStudy ({studyAbroadData}) {
   return (
     <div className='section__spacing'>
       {studyAbroadData.map(item => (
-        <div key={item.id} className='grid grid-cols-2 gap-16 items-center h-full'>
+        <div key={item.id} className='grid lg:grid-cols-2 gap-16 items-center h-full'>
           <img
             src={item.image}
             alt={item.title}

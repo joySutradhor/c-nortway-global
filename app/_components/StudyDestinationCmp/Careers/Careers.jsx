@@ -5,7 +5,7 @@ export default function Careers ({ careersData }) {
   return (
     <div className='section__spacing'>
       {careersData?.map(item => (
-        <div key={item.id} className='grid grid-cols-2 items-center gap-16 h-full'>
+        <div key={item.id} className='grid lg:grid-cols-2 items-center gap-16 h-full'>
           <div>
             <TooltipBtn text={item.tooltipText} />
             <h3 className='headingText'>

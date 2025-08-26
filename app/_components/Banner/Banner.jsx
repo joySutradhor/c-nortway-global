@@ -8,7 +8,7 @@ export default function Banner ({ url, text, des , colorText }) {
     >
       <div>
         <h2 className='banner__title'> <span className='banner__color__title'>{colorText}</span> {text}</h2>
-        {des && <p className='mt-4 max-w-3xl text-black text-lg'>{des}</p>}
+        {des && <p className='mt-4 max-w-3xl text-black text-lg line-clamp-2 lg:line-clamp-none'>{des}</p>}
       </div>
     </div>
   )

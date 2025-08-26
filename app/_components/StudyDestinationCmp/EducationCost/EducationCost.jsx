@@ -6,7 +6,7 @@ export default function EducationCost ({educationCostData}) {
   return (
     <div className='section__spacing'>
       {educationCostData?.map(item => (
-        <div key={item.id} className='grid grid-cols-2 items-center gap-16 h-full'>
+        <div key={item.id} className='grid lg:grid-cols-2 items-center gap-16 h-full'>
           <img
             src={item.image}
             alt={item.title}

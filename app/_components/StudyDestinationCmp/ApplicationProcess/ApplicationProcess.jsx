@@ -27,7 +27,7 @@ const applicationProcess = [
   },
   {
     id: 8,
-    title: 'Visa application for submission',
+    title: 'Visa application',
     icon: <SiVisa size={24} />,
     highlight: true
   }
@@ -37,7 +37,6 @@ export default function ApplicationProcess () {
   return (
     <section className=''>
       <div className='section__spacing'>
-   
         <h2 className='headingText text-center'>
           <span className='text-[#ff9100]'>Our</span> Application Process
         </h2>
@@ -48,13 +47,13 @@ export default function ApplicationProcess () {
           financial information, and a personal statement.
         </p>
 
-        <div className='flex items-center justify-center mb-12'>
+        <div className='flex md:flex-row flex-col md:items-center md:justify-center justify-start mb-12 space-y-5 md:space-y-0 gap-x-3 md:gap-x-0'>
           {applicationProcess.slice(0, 5).map((step, index, arr) => (
             <div key={step.id} className='flex items-center'>
               {/* Circle + title */}
-              <div className='flex flex-col items-center text-center w-[16vw] relative'>
+              <div className='flex md:flex-col items-center text-center md:mx-5 lg:mx-0 xl:w-[16vw] lg:w-[18vw] md:w-[16vw] relative gap-x-3 md:gap-x-0 bg-gray-100 p-5 rounded-lg w-full md:bg-transparent'>
                 <div
-                  className={`flex items-center justify-center size-20 rounded-full border-2 border-dashed ${
+                  className={`flex items-center justify-center size-16 md:size-20 rounded-full border-2 border-dashed ${
                     step.highlight
                       ? 'bg-[#ff9100] text-white border-[#ff9100]'
                       : 'border-gray-400 text-gray-700'
@@ -68,20 +67,20 @@ export default function ApplicationProcess () {
 
                 {/* Dashed line connecting to next circle */}
                 {index !== arr.length - 1 && (
-                  <div className='absolute top-10 right-[-35%] w-[70%] h-0.5 border-t-2 border-dashed border-gray-400'></div>
+                  <div className='absolute md:top-16 lg:top-16 xl:top-16  md:right-[-45%] md:w-[60%] lg:right-[-25%] lg:w-[50%] xl:right-[-30%] xl:w-[61%] 2xl:right-[-35%] 2xl:w-[70%]  h-0.5 border-t-2 border-dashed border-gray-400'></div>
                 )}
               </div>
             </div>
           ))}
         </div>
 
-        <div className='flex items-center justify-center mt-16  mb-12'>
+        <div className='flex md:flex-row flex-col md:items-center md:justify-center justify-start mb-12 space-y-5 md:space-y-0 gap-x-3 md:gap-x-0'>
           {applicationProcess.slice(5, 9).map((step, index, arr) => (
             <div key={step.id} className='flex items-center'>
               {/* Circle + title */}
-              <div className='flex flex-col items-center text-center w-[16vw] relative'>
+              <div className='flex md:flex-col items-center text-center md:mx-5 lg:mx-0 xl:w-[16vw] lg:w-[22vw] md:w-[18vw] relative gap-x-3 md:gap-x-0 bg-gray-100 p-5 rounded-lg w-full md:bg-transparent'>
                 <div
-                  className={`flex items-center justify-center size-20 rounded-full border-2 border-dashed ${
+                  className={`flex items-center justify-center size-16 md:size-20 rounded-full border-2 border-dashed ${
                     step.highlight
                       ? 'bg-[#ff9100] text-white border-[#ff9100]'
                       : 'border-gray-400 text-gray-700'
@@ -95,7 +94,7 @@ export default function ApplicationProcess () {
 
                 {/* Dashed line connecting to next circle */}
                 {index !== arr.length - 1 && (
-                  <div className='absolute top-10 right-[-35%] w-[70%] h-0.5 border-t-2 border-dashed border-gray-400'></div>
+                  <div className='absolute md:top-16 lg:top-16 xl:top-16  md:right-[-45%] md:w-[60%] lg:right-[-30%] lg:w-[60%] xl:right-[-30%] xl:w-[61%] 2xl:right-[-35%] 2xl:w-[70%]  h-0.5 border-t-2 border-dashed border-gray-400'></div>
                 )}
               </div>
             </div>
