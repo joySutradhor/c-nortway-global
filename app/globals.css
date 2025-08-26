@@ -124,3 +124,9 @@
 .bl__title {
   @apply text-xl  md:text-2xl lg:text-4xl xl:text-4xl font-bold mb-0 text-black/80;
 }
+
+/* footer  */
+
+.location{
+  @apply pl-[28px]
+}

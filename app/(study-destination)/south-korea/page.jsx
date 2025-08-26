@@ -15,11 +15,11 @@ export default function page () {
   const studyAbroadData = [
     {
       id: 1,
-      tooltipText: ' Study In UK',
+      tooltipText: ' Study In Canada',
       image:
         'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/uk/whyStudy.jpg',
       title: 'Why Study  ',
-      colorText: 'in UK ?',
+      colorText: 'in Canada ?',
       description:
         'UK is home to some of the world’s most prestigious universities. Institutions like Oxford, Cambridge, Sorbonne, and ETH Zurich offer education at the highest standards, and degrees from these universities are highly regarded worldwide.',
       quickFactsTitle: 'Quick Facts',
@@ -175,7 +175,7 @@ export default function page () {
       <div>
         <Banner
           colorText='Study In'
-          text='UK'
+          text='South Korea'
           url={
             'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/uk/ukbanner.png'
           }

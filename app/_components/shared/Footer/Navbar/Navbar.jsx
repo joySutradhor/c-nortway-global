@@ -120,7 +120,7 @@ export default function Navbar () {
                   { name: 'Japan', flag: 'jp', url: '/japan' },
                   { name: 'China', flag: 'cn', url: '/china' },
                   { name: 'South Korea', flag: 'kr', url: '/south-korea' },
-                  { name: 'Austria', flag: 'at', url: '/austria' }
+                  { name: 'Ireland', flag: 'ie', url: '/ireland' }
                 ].map(country => (
                   <Link href={country.url} key={country.name}>
                     <li className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'>
@@ -212,7 +212,7 @@ export default function Navbar () {
                   { name: 'Japan', flag: 'jp', url: '/japan' },
                   { name: 'China', flag: 'cn', url: '/china' },
                   { name: 'South Korea', flag: 'kr', url: '/south-korea' },
-                  { name: 'Austria', flag: 'at', url: '/austria' }
+                  { name: 'Ireland', flag: 'ie', url: '/ireland' }
                 ].map(country => (
                   <Link href={country.url} key={country.name}>
                     <li className='px-4 py-2 hover:bg-gray-100 flex items-center gap-2 cursor-pointer'>

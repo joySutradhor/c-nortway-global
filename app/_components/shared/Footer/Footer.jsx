@@ -1,7 +1,11 @@
 'use client'
 import Image from 'next/image'
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-// import {logo} from "@/public/logo.webp"
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaMapMarkerAlt
+} from 'react-icons/fa'
 import logo from '../../../../public/logo.webp'
 
 export default function Footer () {
@@ -13,12 +17,12 @@ export default function Footer () {
           <div>
             <div>
               <Image
-              alt='logo'
+                alt='logo'
                 src={logo}
                 height={1000}
                 width={1000}
                 className='w-42 object-cover'
-              ></Image>
+              />
             </div>
             <p className='text__base my-2.5'>
               Copyright © 2025 Northway Global. All rights reserved. Excellence
@@ -51,18 +55,18 @@ export default function Footer () {
               </li>
               <li>
                 <a
-                  href='/study-destination'
+                  href='/service'
                   className='underline hover:text-[#FF9100] underline-offset-2'
                 >
-                  Study Destination
+                 Services
                 </a>
               </li>
               <li>
                 <a
-                  href='/gallery'
+                  href='/photo-gallery'
                   className='underline hover:text-[#FF9100] underline-offset-2'
                 >
-                  Gallery
+                  Photo Gallery
                 </a>
               </li>
               <li>
@@ -75,7 +79,7 @@ export default function Footer () {
               </li>
               <li>
                 <a
-                  href='/contact'
+                  href='/contact-us'
                   className='underline hover:text-[#FF9100] underline-offset-2'
                 >
                   Contact Us
@@ -84,58 +88,64 @@ export default function Footer () {
             </ul>
           </div>
 
-          {/* Offices */}
-          <div>
-            <ul className=''>
-              <li className='space-y-1 text-base '>
-                <p className='text__medium'>Dhaka Office </p>
-
-                <p> Kha-12/2, Shahjaspur, Gulshan, Dhaka-1212</p>
-                <p>
-                  <a href='tel:+8801771660030' className=''>
-                    +8801771660030
-                  </a>
-                </p>
-                <p>info@northwayglobal.com</p>
-              </li>
-            </ul>
-          </div>
-
-          {/* Offices */}
+          {/* Dhaka Office */}
           <div>
             <ul>
               <li className='space-y-1 text-base'>
-                <p className='text__medium'>USA Office</p>
-                <p>37 -22 73 Rd St (2nd floor), Jackson Heights NY, 11372</p>
-                <p>
-                  <a href='tel:+19179246493' className=''>
-                    +19179246493
-                  </a>
+                <p className='text__medium flex items-center gap-2'>
+                  <FaMapMarkerAlt className='text-[#FF9100]' /> Dhaka Office
                 </p>
+                <div className='location'>
+                  <p>Kha-12/2, Shahjaspur, Gulshan, Dhaka-1212</p>
+                  <p>
+                    <a href='tel:+8801771660030'>+8801771660030</a>
+                  </p>
+                  <p>info@northwayglobal.com</p>
+                </div>
               </li>
             </ul>
           </div>
 
-          {/* Offices */}
+          {/* USA Office */}
           <div>
             <ul>
               <li className='space-y-1 text-base'>
-                <p className='text__medium'>Australia Office</p>
-                <p> 3/4 Nellie Ave Mitchell, Park SA, 5043</p>
-                <p>
-                  {' '}
-                  <a href='tel:+61449615940'>+61449615940</a>
+                <p className='text__medium flex items-center gap-2'>
+                  <FaMapMarkerAlt className='text-[#FF9100]' /> USA Office
                 </p>
+                <div className='location'>
+                  <p>37 -22 73 Rd St (2nd floor), Jackson Heights NY, 11372</p>
+                  <p>
+                    <a href='tel:+19179246493'>+19179246493</a>
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
-          <div></div>
+
+          {/* Australia Office */}
+          <div>
+            <ul>
+              <li className='space-y-1 text-base'>
+                <p className='text__medium flex items-center gap-2'>
+                  <FaMapMarkerAlt className='text-[#FF9100]' /> Australia Office
+                </p>
+                <div className='location'>
+                  <p>3/4 Nellie Ave Mitchell, Park SA, 5043</p>
+                  <p>
+                    <a href='tel:+61449615940'>+61449615940</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className='border-t border-black/10 mt-10 pt-4 text-center text-sm font-medium text-black/70 pb-5'>
           <p>
-            Designed and Developed By  <span className='text-black'>Ethical Den</span>
+            Designed and Developed By{' '}
+            <span className='text-black'>Ethical Den</span>
           </p>
         </div>
       </div>

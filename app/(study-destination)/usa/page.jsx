@@ -1,5 +1,6 @@
 import Banner from '@/app/_components/Banner/Banner'
 import BlogList from '@/app/_components/Blogs/Blogs'
+import StudentSpeaks from '@/app/_components/StudentSpeaks/StudentSpeaks'
 
 import ApplicationProcess from '@/app/_components/StudyDestinationCmp/ApplicationProcess/ApplicationProcess'
 import Careers from '@/app/_components/StudyDestinationCmp/Careers/Careers'
@@ -9,7 +10,6 @@ import AtAGlance from '@/app/_components/StudyDestinationCmp/Glance/Glance'
 import PopularUniversities from '@/app/_components/StudyDestinationCmp/PopularUniversities/PopularUniversities'
 import WhyStudy from '@/app/_components/StudyDestinationCmp/WhyStudy/WhyStudy'
 import Testimonial from '@/app/_components/Testimonial/Testimonial'
-
 
 export default function page () {
   const studyAbroadData = [
@@ -188,11 +188,15 @@ export default function page () {
       <PopularUniversities universities={universities} />
       <EducationCost educationCostData={educationCostData} />
       <AtAGlance glanceData={glanceData} colorText='Usa' />
+      <StudentSpeaks />
       <Testimonial />
-      <FaqArea  faqsData ={faqsData} des="Studying in the USA can offer a variety of benefits, making it
+      <FaqArea
+        faqsData={faqsData}
+        des='Studying in the USA can offer a variety of benefits, making it
                 an attractive destination for international students. Here are
-                some reasons why study in USA is a popular choice."/>
-      <BlogList/>
+                some reasons why study in USA is a popular choice.'
+      />
+      <BlogList />
     </div>
   )
 }

@@ -175,7 +175,7 @@ export default function page () {
       <div>
         <Banner
           colorText='Study In'
-          text='UK'
+          text='Austria'
           url={
             'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/uk/ukbanner.png'
           }
