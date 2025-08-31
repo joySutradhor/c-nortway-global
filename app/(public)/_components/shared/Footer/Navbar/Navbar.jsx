@@ -11,7 +11,7 @@ import {
 import { FaLocationArrow } from 'react-icons/fa6'
 import { FiMenu, FiX } from 'react-icons/fi'
 
-import logo from '../../../../../public/logo.webp'
+import logo from '../../../../public/logo.webp'
 import Link from 'next/link'
 
 export default function Navbar () {

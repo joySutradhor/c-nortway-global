@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
   FaMapMarkerAlt
 } from 'react-icons/fa'
-import logo from '../../../../public/logo.webp'
+import logo from '../../../public/logo.webp'
 
 export default function Footer () {
   return (

@@ -1,22 +1,15 @@
-// import { Geist, Geist_Mono } from 'next/font/google'
+
 import './globals.css'
 import Footer from './_components/shared/Footer/Footer'
 import Navbar from './_components/shared/Footer/Navbar/Navbar'
 import localFont from 'next/font/local'
 import { IoLogoWhatsapp } from 'react-icons/io'
 
-// const geistSans = Geist({
-//   variable: '--font-geist-sans',
-//   subsets: ['latin']
-// })
 
-// const geistMono = Geist_Mono({
-//   variable: '--font-geist-mono',
-//   subsets: ['latin']
-// })
+
 
 const helvetica = localFont({
-  src: '../public/Helvetica.woff2'
+  src: './public/Helvetica.woff2'
 })
 
 export const metadata = {
