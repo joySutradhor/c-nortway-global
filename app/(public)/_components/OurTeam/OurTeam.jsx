@@ -237,13 +237,15 @@ export default function OurTeam () {
         {teamMembers.map(member => (
           <div
             key={member.id}
-            className=' flex flex-col items-center text-center '
+            className=' flex flex-col items-center text-center group  '
           >
-            <img
-              src={member.image}
-              alt={member.name}
-              className=' rounded-md object-cover h-[35vh] w-full  mb-4'
-            />
+            <div className='overflow-hidden rounded-md'>
+              <img
+                src={member.image}
+                alt={member.name}
+                className=' rounded-md object-cover h-[35vh] w-full  mb-4 hover:scale-110 ease-in-out duration-1000 hover:rounded-md'
+              />
+            </div>
             <h3 className='text__medium'>{member.name}</h3>
             <p className='text__base mb-4'>{member.title}</p>
 
@@ -255,7 +257,7 @@ export default function OurTeam () {
                   href={social.link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='p-2 bg-gray-100 hover:bg-[#ff9100] hover:text-white rounded-full  text-gray-600 transition'
+                  className='p-2 bg-gray-100 group-hover:bg-[#ff9100] group-hover:text-white rounded-full duration-500 ease-in-out  text-gray-600 transition'
                 >
                   {social.icon}
                 </a>
@@ -279,13 +281,15 @@ export default function OurTeam () {
         {teamMembersExecutive.map(member => (
           <div
             key={member.id}
-            className=' flex flex-col items-center text-center '
+            className=' flex flex-col items-center text-center group'
           >
-            <img
-              src={member.image}
-              alt={member.name}
-              className=' rounded-md object-cover h-[35vh] w-full  mb-4'
-            />
+            <div className='rounded-md overflow-hidden'>
+              <img
+                src={member.image}
+                alt={member.name}
+                className=' rounded-md object-cover h-[35vh] w-full  mb-4 hover:scale-110 duration-1000 ease-in-out '
+              />
+            </div>
             <h3 className='text__medium'>{member.name}</h3>
             <p className='text__base mb-4'>{member.title}</p>
 
@@ -297,7 +301,7 @@ export default function OurTeam () {
                   href={social.link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='p-2 bg-gray-100 hover:bg-[#ff9100] hover:text-white rounded-full  text-gray-600 transition'
+                  className='p-2 bg-gray-100 group-hover:bg-[#ff9100] group-hover:text-white rounded-full duration-500 ease-in-out  text-gray-600 transition'
                 >
                   {social.icon}
                 </a>

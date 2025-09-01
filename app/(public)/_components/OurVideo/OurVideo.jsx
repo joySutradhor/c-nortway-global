@@ -27,6 +27,37 @@ function OurVideo () {
     ]
   }
 
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   centerPadding: '0px',
+  //   arrows: false,
+  //   slidesToShow: 3, 
+  //   slidesToScroll: 1,
+  //   centerMode: true, 
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024, 
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         centerMode: false 
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 640, 
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         centerMode: false 
+  //       }
+  //     }
+  //   ]
+  // }
+
   const images = [
     'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/cost.webp',
     'https://pub-5955669eccb64965b91474a798f31ae3.r2.dev/usa/cost.webp',
