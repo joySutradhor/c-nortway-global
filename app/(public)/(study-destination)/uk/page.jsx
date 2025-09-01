@@ -1,15 +1,5 @@
-import Banner from '@/app/_components/Banner/Banner'
-import BlogList from '@/app/_components/Blogs/Blogs'
-import StudentSpeaks from '@/app/_components/StudentSpeaks/StudentSpeaks'
 
-import ApplicationProcess from '@/app/_components/StudyDestinationCmp/ApplicationProcess/ApplicationProcess'
-import Careers from '@/app/_components/StudyDestinationCmp/Careers/Careers'
-import EducationCost from '@/app/_components/StudyDestinationCmp/EducationCost/EducationCost'
-import FaqArea from '@/app/_components/StudyDestinationCmp/FaqArea/FaqArea'
-import AtAGlance from '@/app/_components/StudyDestinationCmp/Glance/Glance'
-import PopularUniversities from '@/app/_components/StudyDestinationCmp/PopularUniversities/PopularUniversities'
-import WhyStudy from '@/app/_components/StudyDestinationCmp/WhyStudy/WhyStudy'
-import Testimonial from '@/app/_components/Testimonial/Testimonial'
+
 
 export default function page () {
   const studyAbroadData = [
